@@ -1,0 +1,7 @@
+{
+  "editor.tabSize": 2,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.pinnedTabSizing": "compact",
+  "workbench.editor.wrapTabs": true,
+  "workbench.editor.titleScrollbarSizing": "large"
+}
