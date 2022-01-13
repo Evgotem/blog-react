@@ -1,0 +1,64 @@
+@import './variables.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  color: $black;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.appWrapper {
+  display: flex;
+  height: 100vh;
+  padding-left: 70px;
+  padding-right: 100px;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  padding-bottom: 30px;
+}
+
+.menu {
+  width: 100px;
+  background: $blue;
+  height: 100%;
+  display: flex;
+  justify-content: center; 
+  padding-bottom: 45px;
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+  top: 0;
+  
+  span {
+    color: #fff;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg); 
+    text-transform: uppercase;
+    display: block;
+    padding-top: 34px;
+    background-image: url('../public/images/burger.png');
+    background-repeat: no-repeat;
+    font-weight: 600;
+  }
+}
