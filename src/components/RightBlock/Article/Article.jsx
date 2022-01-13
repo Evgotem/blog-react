@@ -4,7 +4,7 @@ import styles from './Article.module.scss';
 export const Article = ({ title, preview, date, views, imgURL }) => {
   return (
     <div className={styles.article}>
-      <div>
+      <div className={styles.wrapper}>
         <h3>{title}</h3>       
           <p className={styles.preview}>
             {preview}

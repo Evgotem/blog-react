@@ -11,6 +11,7 @@ const articles = [
     date: '12 августа 2019 в 08:06',
     views: 301,
     imgURL: '',
+    id: 1
   },
   {
     title: 'Какой-то очень интересный заголовок',
@@ -19,6 +20,7 @@ const articles = [
     date: '12 июня 2019 в 18:45',
     views: 55,
     imgURL: '/images/articleImages/article234.jpg',
+    id: 2
   },
   {
     title: 'Ставим обработчик фокуса для кастомоного React-компонента',
@@ -27,6 +29,7 @@ const articles = [
     date: '17 февраля 2019 в 13:57',
     views: 16,
     imgURL: '',
+    id: 3
   },
   {
     title: 'Amet molestie tincidunt id nascetur sit purus turpis',
@@ -35,6 +38,7 @@ const articles = [
     date: '10 января 2019 в 10:08',
     views: 30,
     imgURL: '/images/articleImages/art3.png',
+    id: 4
   },
 ];
 
@@ -45,6 +49,7 @@ export const RightBlock = () => {
       {articles.map((article) => {
         return (
           <Article
+            key={article.id}
             title={article.title}  
             preview={article.preview}
             date={article.date}
