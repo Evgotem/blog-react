@@ -9,7 +9,7 @@ function App() {
         <RightBlock />
       </div>
       <div className="menu">
-        <span> Меню</span>
+        <span>Меню</span>
       </div>
     </div>
   );

@@ -4,8 +4,6 @@ import styles from './Search.module.scss';
 export const Search = ({handleChangeInput, searchValue}) => {
   const [activeSearch, setActiveSearch] = React.useState(false);
 
-
-
   return (
     <div className={`${styles.search} ${activeSearch && styles.active}`}>
       <h4>Evgeny blog</h4>

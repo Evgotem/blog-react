@@ -1,13 +1,14 @@
 import React from 'react';
-import styles from './Article.module.scss';
+import { Link } from 'react-router-dom';
+import styles from './ArticlePreviews.module.scss';
 
-export const Article = ({ title, preview, date, views, imgURL }) => {
+export const ArticlePreviews = ({ title, preview, date, views, imgURL, id }) => {
   return (
     <div className={styles.article}>
       <div className={styles.wrapper}>
         <h3>{title}</h3>       
           <p className={styles.preview}>
-            {preview}
+            <Link className={styles.link} to={`/articles/${id}`}>{preview}</Link>
           </p>
           <div className={styles.info}>
             <span className={styles.date}>{date}</span>
