@@ -1,13 +1,10 @@
 import React from 'react';
 import styles from './Search.module.scss';
 
-export const Search = () => {
+export const Search = ({handleChangeInput, searchValue}) => {
   const [activeSearch, setActiveSearch] = React.useState(false);
-  const [inputValue, setInputValue] = React.useState('');
 
-  const handleChangeInput = event => {
-    setInputValue(event.target.value);
-  }
+
 
   return (
     <div className={`${styles.search} ${activeSearch && styles.active}`}>
@@ -24,11 +21,11 @@ export const Search = () => {
         <input 
           type="text"
           placeholder="Поиск статьи по заголовку или тексту..."
+          onChange={handleChangeInput}
+          value={searchValue}
         />
         <img 
           onClick={() => setActiveSearch(false)} 
-          onChange={handleChangeInput}
-          value={inputValue}
           src="/images/close.png"
           alt="close"
         />

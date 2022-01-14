@@ -11,7 +11,7 @@ const articles = [
     date: '12 августа 2019 в 08:06',
     views: 301,
     imgURL: '',
-    id: 1
+    id: 1,
   },
   {
     title: 'Какой-то очень интересный заголовок',
@@ -20,7 +20,7 @@ const articles = [
     date: '12 июня 2019 в 18:45',
     views: 55,
     imgURL: '/images/articleImages/article234.jpg',
-    id: 2
+    id: 2,
   },
   {
     title: 'Ставим обработчик фокуса для кастомоного React-компонента',
@@ -29,7 +29,7 @@ const articles = [
     date: '17 февраля 2019 в 13:57',
     views: 16,
     imgURL: '',
-    id: 3
+    id: 3,
   },
   {
     title: 'Amet molestie tincidunt id nascetur sit purus turpis',
@@ -38,26 +38,37 @@ const articles = [
     date: '10 января 2019 в 10:08',
     views: 30,
     imgURL: '/images/articleImages/art3.png',
-    id: 4
+    id: 4,
   },
 ];
 
 export const RightBlock = () => {
+  const [searchValue, setSearchValue] = React.useState('');
+  const handleChangeInput = (event) => {
+    setSearchValue(event.target.value);
+  };
+
   return (
     <div className={styles.rightBlock}>
-      <Search />
-      {articles.map((article) => {
-        return (
-          <Article
-            key={article.id}
-            title={article.title}  
-            preview={article.preview}
-            date={article.date}
-            views={article.views}
-            imgURL={article.imgURL}
-          />
-        );
-      })}
+      <Search handleChangeInput={handleChangeInput} searchValue={searchValue} />
+      {articles
+        .filter(
+          (item) =>
+            item.title.toLowerCase().includes(searchValue.toLowerCase()) ||
+            item.preview.toLowerCase().includes(searchValue.toLowerCase()),
+        )
+        .map((article) => {
+          return (
+            <Article
+              key={article.id}
+              title={article.title}
+              preview={article.preview}
+              date={article.date}
+              views={article.views}
+              imgURL={article.imgURL}
+            />
+          );
+        })}
     </div>
   );
 };
