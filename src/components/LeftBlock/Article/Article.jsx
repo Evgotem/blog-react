@@ -35,7 +35,7 @@ export const Article = () => {
 
           <div className={styles.comment}>
             <div className={styles.commentTitle}>
-              <h5>Vasya Pupkin</h5>
+              <h5>Evgeny T.</h5>
               <span>12 августа 2019 в 08:06</span>
             </div>
             <div className={styles.articleText}>
@@ -44,7 +44,7 @@ export const Article = () => {
           </div>
           <div className={styles.comment}>
             <div className={styles.commentTitle}>
-              <h5>Vasya Pupkin</h5>
+              <h5>Evgeny T.</h5>
               <span>12 августа 2019 в 08:06</span>
             </div>
             <div className={styles.articleText}>
@@ -53,7 +53,7 @@ export const Article = () => {
           </div>
           <div className={styles.comment}>
             <div className={styles.commentTitle}>
-              <h5>Vasya Pupkin</h5>
+              <h5>Evgeny T.</h5>
               <span>12 августа 2019 в 08:06</span>
             </div>
             <div className={styles.articleText}>

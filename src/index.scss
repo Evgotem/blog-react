@@ -9,6 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
@@ -36,27 +37,3 @@ code {
   flex: 1;
 }
 
-.menu {
-  width: 100px;
-  background: $blue;
-  height: 100%;
-  display: flex;
-  justify-content: center; 
-  padding-bottom: 45px;
-  cursor: pointer;
-  position: fixed;
-  right: 0;
-  top: 0;
-  
-  span {
-    color: #fff;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg); 
-    text-transform: uppercase;
-    display: block;
-    padding-top: 34px;
-    background-image: url('../public/images/burger.png');
-    background-repeat: no-repeat;
-    font-weight: 600;
-  }
-}
