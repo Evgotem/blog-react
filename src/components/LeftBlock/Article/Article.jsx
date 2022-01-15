@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { Button } from '../../Button/Button';
 
 import styles from './Article.module.scss';
 
@@ -9,7 +10,6 @@ export const Article = () => {
   const articles = useSelector((state) => state.articles);
 
   let article = articles.filter((a) => a.id === +id)[0];
-  console.log(article);
 
   return (
     <>
@@ -66,7 +66,9 @@ export const Article = () => {
         <div className={styles.addCommentBlock}>
           <h5>Добавить комментарий</h5>
           <textarea name="" id="" ></textarea>
-          <button>Отправить</button>
+          <Button width={'fitContent'}>
+            Отправить
+          </Button>
         </div>
       </div>
 

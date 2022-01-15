@@ -97,7 +97,7 @@ nav {
 
 .activeLink {
   background: #213D67;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .menu.active nav {
@@ -112,9 +112,11 @@ nav {
   width: 0;
   height: 100%;
   z-index: 15;
-  background: rgba(0, 0, 0, 0.3);
+  background: $blue;
+  opacity: 0.4;
   transition: all 0.2s ease-in-out;
 }
+
 .menu.active + .overlay {
   width: 100%;
   transition: all 0.3s ease-in-out;

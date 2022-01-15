@@ -17,31 +17,45 @@ export const Menu = () => {
           </div>
           <ul>
             <li>
-              <NavLink className={({isActive}) => isActive ? styles.activeLink : ''} to="/">Главная</NavLink>
+              <NavLink className={({ isActive }) => (isActive ? styles.activeLink : '')} to="/">
+                Главная
+              </NavLink>
             </li>
             <li>
-              <NavLink className={({isActive}) => isActive ? styles.activeLink : ''} to="/profile">Мой профиль</NavLink>
+              <NavLink
+                className={({ isActive }) => (isActive ? styles.activeLink : '')}
+                to="/profile">
+                Мой профиль
+              </NavLink>
             </li>
             <li>
-              <NavLink className={({isActive}) => isActive ? styles.activeLink : ''} to="/createArticle">Создать запись</NavLink>
+              <NavLink
+                className={({ isActive }) => (isActive ? styles.activeLink : '')}
+                to="/createArticle">
+                Создать запись
+              </NavLink>
             </li>
             <li>
-              <NavLink className={({isActive}) => isActive ? styles.activeLink : ''} to="/exit">Выйти</NavLink>
+              <NavLink className={({ isActive }) => (isActive ? styles.activeLink : '')} to="/exit">
+                Выйти
+              </NavLink>
             </li>
           </ul>
         </nav>
-        <span onClick={(e) => {
-          e.stopPropagation();
-          setIsActiveMenu(!isActiveMenu)
-        }}>
+        <span
+          onClick={(e) => {
+            e.stopPropagation();
+            setIsActiveMenu(!isActiveMenu);
+          }}>
           <img src={isActiveMenu ? '/images/close.png' : '/images/burger.png'} alt="" />
           Меню
         </span>
       </div>
-      <div 
-        className={styles.overlay} 
-        onClick={() => {setIsActiveMenu(false)}}
-      ></div>
+      <div
+        className={styles.overlay}
+        onClick={() => {
+          setIsActiveMenu(false);
+        }}></div>
     </>
   );
 };
