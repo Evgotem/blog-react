@@ -1,4 +1,5 @@
 import { LeftBlock } from "./components/LeftBlock/LeftBlock";
+import { Menu } from "./components/Menu/Menu";
 import { RightBlock } from "./components/RightBlock/RightBlock";
 
 function App() {
@@ -8,9 +9,7 @@ function App() {
         <LeftBlock />
         <RightBlock />
       </div>
-      <div className="menu">
-        <span> Меню</span>
-      </div>
+     <Menu />
     </div>
   );
 }
