@@ -14,27 +14,17 @@
 }
 
 form {
-  max-width: 450px;
+  width: 446px;
   max-height: 475px;
   background: #fff;
   border-radius: 12px;
-  padding: 30px 40px;
+  padding: 40px 40px 50px;
 
   label {
     display: block;
     font-size: 13px;
     font-weight: 600;
     margin-bottom: 8px;
-  }
-
-  input {
-    outline: none;
-    border-radius: 12px;
-    border: 2px solid $lightgray;
-    height: 12px;
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 22px 10px;
   }
 }
 
