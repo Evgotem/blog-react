@@ -1,7 +1,56 @@
 @import '../../variables.scss';
 
 .profile {
-  background: pink;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 15;
+  padding-right: 100px;
+  padding-top: 70px;
   color: $blue;
   height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.author {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $buleText;
+}
+
+h1 {
+  color: #0058D9;
+  font-size: 58px;
+  line-height: 52px;
+  margin-bottom: 12px;
+}
+
+.infoTitle {
+  padding-bottom: 20px;
+  border-bottom: 1px solid $lightgray;
+}
+
+.links {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: $black;
+    padding: 10px 20px;
+  }
+  .activeLink {
+    background: #D3FFE0;
+    color: #36B55A;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+  }
 }
