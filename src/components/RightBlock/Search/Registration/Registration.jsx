@@ -3,39 +3,11 @@ import { Button } from '../../../Button/Button';
 import styles from './Registration.module.scss';
 import { useForm } from 'react-hook-form';
 import {
-  FormControl,
-  IconButton,
-  InputAdornment,
-  InputLabel,
-  OutlinedInput,
-  TextField,
+ TextField
 } from '@mui/material';
 
-import { Visibility } from '@mui/icons-material';
-import { VisibilityOff } from '@mui/icons-material';
 
 export const Registration = ({ setRegistration }) => {
-  const [values, setValues] = React.useState({
-    amount: '',
-    password: '',
-    weight: '',
-    weightRange: '',
-    showPassword: false,
-  });
-  const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value });
-  };
-
-  const handleClickShowPassword = () => {
-    setValues({
-      ...values,
-      showPassword: !values.showPassword,
-    });
-  };
-
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
-  };
 
   const { register, handleSubmit, reset, formState } = useForm();
 
