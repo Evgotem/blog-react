@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Registration } from './Registration/Registration';
+import { Registration } from '../../pages/Registration/Registration';
 import styles from './Search.module.scss';
 
 export const Search = ({handleChangeInput, searchValue}) => {

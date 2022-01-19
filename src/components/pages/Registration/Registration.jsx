@@ -1,23 +1,34 @@
 import React from 'react';
-import { Button } from '../../../Button/Button';
+import { Button } from '../../Button/Button';
 import styles from './Registration.module.scss';
 import { useForm } from 'react-hook-form';
-import {
- TextField
-} from '@mui/material';
-
+import { TextField } from '@mui/material';
+import axios from 'axios';
 
 export const Registration = ({ setRegistration }) => {
-
   const { register, handleSubmit, reset, formState } = useForm();
 
-  const onSubmit = (values) => console.log(values);
+  const onSubmit = async (values) => {
+    try {
+      await axios.post('http://localhost:5656/auth/register', { 
+        "fullName": values.login, 
+        "email": values.email,
+        "password": values.password
+      })
+    } catch (e) {
+      console.log(e);
+    }
+    
+    console.log(values);
+  };
 
   const onClickOverlay = (e) => {
     if (e.currentTarget === e.target) {
       setRegistration(false);
     }
   };
+
+
   return (
     <div onMouseDown={(e) => onClickOverlay(e)} className={styles.registration}>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -69,7 +80,7 @@ export const Registration = ({ setRegistration }) => {
           sx={{ marginBottom: '20px' }}
         />
 
-      <Button width={'100%'}>Зарегистрироваться</Button>
+        <Button width={'100%'}>Зарегистрироваться</Button>
       </form>
     </div>
   );
