@@ -1,4 +1,4 @@
-@import '../../../../variables.scss';
+@import '../../../variables.scss';
 
 .registration {
   position: fixed;
@@ -52,4 +52,18 @@ button {
   width: 100%;
   border-radius: 12px;
   padding: 12px 0;
+}
+
+.goToLogin {
+  display: block;
+  cursor: pointer;
+  color: $middlegray;
+  margin-top: 40px;
+  transition: all 0.3s ease-in-out;
+  width: fit-content;
+
+  &:hover {
+    color: $black;
+    transition: all 0.3s ease-in-out;
+  }
 }

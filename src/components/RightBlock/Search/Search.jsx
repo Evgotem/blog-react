@@ -1,11 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Registration } from './Registration/Registration';
+import { Login } from '../../pages/Login/Login';
+import { Registration } from '../../pages/Registration/Registration';
 import styles from './Search.module.scss';
 
 export const Search = ({handleChangeInput, searchValue}) => {
   const [activeSearch, setActiveSearch] = React.useState(false);
-  const [registration, setRegistration] = React.useState(false);
+  const [login, setLogin] = React.useState(false);
 
 
   return (
@@ -19,7 +20,7 @@ export const Search = ({handleChangeInput, searchValue}) => {
             alt="search" 
           />
          <img
-          onClick={() => setRegistration(true)}
+          onClick={() => setLogin(true)}
           src="/images/user.png"
           alt="profile" 
           />
@@ -38,7 +39,7 @@ export const Search = ({handleChangeInput, searchValue}) => {
           />
         </div>
       </div>
-      {registration && <Registration setRegistration={setRegistration} />}
+      {login && <Login setLogin={setLogin} />}
    </>
   );
 };
