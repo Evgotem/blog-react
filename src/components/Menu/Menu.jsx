@@ -31,7 +31,7 @@ export const Menu = () => {
             <li>
               <NavLink
                 className={({ isActive }) => (isActive ? styles.activeLink : '')}
-                to="/createArticle">
+                to="/createPost">
                 Создать запись
               </NavLink>
             </li>

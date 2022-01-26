@@ -15,7 +15,7 @@ const Input = styled('input')({
 const ControlledUsage = () => {
   const [value, setValue] = React.useState("");
 
-  const onChange = (value: string) => {
+  const onChange = (value) => {
     setValue(value);
   };
 

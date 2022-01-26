@@ -1,7 +1,7 @@
+import { Button } from '@mui/material';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { Button } from '../../Button/Button';
 
 import styles from './Article.module.scss';
 
@@ -66,9 +66,7 @@ export const Article = () => {
         <div className={styles.addCommentBlock}>
           <h5>Добавить комментарий</h5>
           <textarea name="" id="" ></textarea>
-          <Button width={'fitContent'}>
-            Отправить
-          </Button>
+          <Button variant="contained">Отправить</Button>
         </div>
       </div>
 

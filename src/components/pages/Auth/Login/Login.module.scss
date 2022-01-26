@@ -1,0 +1,46 @@
+@import '../../../../variables.scss';
+
+.wrapper {
+  background: rgba(233, 233, 233, 0.97);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  max-width: 500px;
+  padding: 20px;
+  background: #fff;
+  border: 2px solid $middlegray;
+  border-radius: 15px;
+  height: fit-content;
+  position: relative;
+
+  h1 {
+    margin: 10px 0 15px;
+    font-size: 45px;
+  }
+
+  img {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  button {
+    margin-top: 10px !important;
+  }
+
+}
+
+.isRegistered {
+  cursor: pointer;
+  margin-top: 35px;
+  user-select: none;
+}
