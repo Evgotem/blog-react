@@ -3,10 +3,13 @@ import styles from './UserPage.module.scss';
 
 import { Navigate } from 'react-router-dom';
 
+const token = localStorage.getItem('token');
 export const UserPage = () => {
   return (
     <div className={styles.wrapper}>
-      <Navigate to='/login' />
+      {
+        !{token} && <Navigate to='/login' />
+      }
       <h2 className={styles.title}>Evgeny T.</h2>
       <p className={styles.subtitle}>Блог фронтенд-разработчика</p>
       <img src='images/photo.jpg' alt='photo' className={styles.photo} />

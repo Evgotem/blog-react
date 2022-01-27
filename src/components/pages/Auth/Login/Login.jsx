@@ -3,25 +3,31 @@ import React from 'react';
 import styles from './Login.module.scss';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export const Login = () => {
-  const [isRegistered, setIsRegistered] = React.useState(false);
+  const [isRegistered, setIsRegistered] = React.useState(true);
+  const navigate = useNavigate();
+  const goProfile = () => navigate('/', { replace: true });
 
   const { handleSubmit, register, formState } = useForm();
   const onSubmit = async (values) => {
     if (isRegistered) {
+      // Авторизация
       try {
         await axios
           .post('http://localhost:5656/auth/login', {
             email: values.email,
             password: values.password,
           })
-          .then(({ data }) => console.log(data.token));
+          .then(({ data }) => localStorage.setItem('token', data.token));
+          goProfile();
       } catch (e) {
         console.log(e);
       }
       console.log(values);
     } else {
+      // Регистрация
       try {
         await axios
           .post('http://localhost:5656/auth/register', {
@@ -29,7 +35,8 @@ export const Login = () => {
             email: values.email,
             password: values.password,
           })
-          .then((r) => console.log(r));
+          .then(({ data }) => localStorage.setItem('token', data.token));
+          goProfile();
       } catch (e) {
         console.log('ОШИБКА!!!', e);
       }
@@ -50,6 +57,7 @@ export const Login = () => {
             })}
           />
         )}
+
         <TextField
           label='Email'
           fullWidth

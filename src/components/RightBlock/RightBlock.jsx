@@ -3,6 +3,7 @@ import { ArticlePreviews } from './ArticlePreviews/ArticlePreviews.jsx';
 import styles from './RightBlock.module.scss';
 import { Search } from './Search/Search';
 import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 
 
 export const RightBlock = () => {
@@ -16,7 +17,9 @@ export const RightBlock = () => {
   return (
     <div className={styles.rightBlock}>
       <Search handleChangeInput={handleChangeInput} searchValue={searchValue} />
-      {articles
+      {articles.length 
+      ?      
+      articles
         .filter(
           (item) =>
             item.title.toLowerCase().includes(searchValue.toLowerCase()) ||
@@ -34,7 +37,12 @@ export const RightBlock = () => {
               imgURL={article.imgURL}
             />
           );
-        })}
+        })
+      :
+      <div className={styles.createNewPost}>
+        <NavLink to='/posts'>Создайте статью</NavLink>
+      </div>
+      }
     </div>
   );
 };

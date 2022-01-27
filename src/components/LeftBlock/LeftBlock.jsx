@@ -18,7 +18,7 @@ export const LeftBlock = () => {
           <Route index element={<UserPage />} />
           <Route path='profile' element={<Profile />} />
           <Route path={`articles/:id`} element={<Article />} />
-          <Route path={`createPost`} element={
+          <Route path={`posts`} element={
             <RequireAuth>
               <CreatePost />
             </RequireAuth>

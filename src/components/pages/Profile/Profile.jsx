@@ -1,8 +1,13 @@
+import axios from 'axios';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './Profile.module.scss';
 
 export const Profile = () => {
+  React.useEffect(() => {
+    axios.post('http://localhost:5656/auth/me').then(resp => console.log(resp))
+  }, [])
+
   return (
     <div className={styles.profile}>
       <span className={styles.author}>

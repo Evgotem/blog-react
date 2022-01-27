@@ -8,3 +8,19 @@
   position: relative;
   height: 100%;
 }
+
+.createNewPost {
+  a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 25px 15px;
+    transition: all 0.3s ease-in-out;
+    color: $middlegray;
+
+    &:hover {
+      color: $blueText;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
